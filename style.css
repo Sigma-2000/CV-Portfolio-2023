@@ -202,13 +202,21 @@ nav a:hover
     
 }
 
+.btn-cv a{
+    text-decoration: none; 
+    
+}
 
-.btn-cv:hover, .btn-cv:focus {
+.btn-cv:hover, .btn-cv:focus{
     box-shadow: 
       0 0 0 0;
    background : black;
-  color:white
+   color:white
   }
+.btn-cv:hover a, .btn-cv:focus a{
+    text-decoration: none;
+    color: white;
+}
 
 
 
