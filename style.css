@@ -16,6 +16,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: antiquewhite;
     }
 
 
@@ -23,8 +24,8 @@ h1 {
     color: white;  
     text-transform: uppercase;
     text-align: center; 
-    margin-top: 290px;
     font-size: 2.5em;
+    margin-top: 0px;
 }
 
 h2 {
@@ -36,6 +37,15 @@ h3 {
     text-transform: uppercase;
     text-align: center; 
     font-size: 1.7em;
+    
+}
+
+h4{
+    font-size: 1.4em;
+}
+
+p{
+    font-size: 1.2em ;
 }
 
 header
@@ -75,17 +85,57 @@ nav a
 
 nav a:hover
 {
-    color: #5b99ea;
-    border-bottom: 3px solid #5b99ea;
+    color: rgb(220, 178, 122);
+    border-bottom: 3px solid rgb(220, 178, 122);
 }
 
 #accueil {
+    margin-top: 0;
     background-image: url(images/rain-code\ pres.png);
     background-size: cover;
     height: 100vh;
-    top: 0;
-    left: 0;
-    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+/* Créez une animation appelée 'slide-in' */
+@keyframes title-slide {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+h1, h3 {
+    animation: title-slide 1s ease-in-out forwards;
+}
+
+.titre-conteneur{
+    margin-top: 0;
+    background-color: #fff;
+    box-shadow: 7px 7px 0 0 #222; 
+}
+
+
+#two{
+    width: 125px;
+}
+
+#three{
+    width:200px ;
+}
+
+#four{
+    width: 120px;
+}
+
+#five{
+    width:200px;
 }
 
 #a-propos {
@@ -98,9 +148,8 @@ nav a:hover
 
 #photo-AG 
 {
+    margin-top: 1.3rem;
     width: 200px;
-  
-
 }
 
 .content {
@@ -115,8 +164,8 @@ nav a:hover
     margin-top: 50px;
     width: 70%;
     min-width: 200px;
-    
 }
+
 
 #competences {
     height: 170vh;
@@ -173,15 +222,15 @@ nav a:hover
 
 .cv img{
     width: 600px;
-    margin-top: 20px;
-    margin-bottom: 20px
+    margin-top: 1.3rem;
+    margin-bottom: 1.3rem;
 }
 
 .cv {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: antiquewhite;
+    
 
 }
 
@@ -189,10 +238,11 @@ nav a:hover
     margin-left: 10px;
     position: relative;
     padding: 0.8rem 1.6rem;
-    font-family: Brandon;
+    font-family: auto;
     font-weight: 900;
     text-transform: uppercase;
     font-size: 1em;
+    color: black;
     text-align: left;
     cursor: pointer;
     background-color: #fff;
@@ -217,7 +267,6 @@ nav a:hover
     text-decoration: none;
     color: white;
 }
-
 
 
 :root {
@@ -287,6 +336,7 @@ nav a:hover
     }
 }
 
+
 #projets{
     height: 100vh;
 }
@@ -301,7 +351,7 @@ nav a:hover
     position: absolute;
     width: 100%;
     min-height: var(--carousel-height);
-    animation-duration: 10s;
+    animation-duration: 25s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
     background-position: center;
@@ -342,12 +392,10 @@ nav a:hover
 
 .slide .slide-hl {
     margin-top: 0;
-    /*font-weight: 500;*/
     font-family: 'Roboto Slab Regular', sans-serif;
 }
 
 .slide .slide-text {
-    /*font-weight: 300;*/
     font-family: 'Roboto Slab Light', sans-serif;
     margin: 0;
 }
@@ -365,13 +413,12 @@ nav a:hover
 }
 
 .slide .slide-link:hover {
-    color: gold;
+    color: rgb(220, 178, 122);
 }
 
 
-
 #contact{
-    height: 30vh; 
+    height: 40vh; 
 }
 
 #contact img {
@@ -379,11 +426,12 @@ nav a:hover
     
 }
 
-.logo {
+.logo-contact {
     display: flex;
     justify-content: space-around ;
     align-items: center;
     align-content: center; 
+    background-color: #fff;
     
 }
 
@@ -407,10 +455,21 @@ nav a:hover
    align-content: center;
    align-items: center; 
 }
-.popupBackground {
-    display: none;
-    position: fixed;
-    height: 100vh;
-    width: 100vw;
-    background-color: rgba(255, 255, 255, 0.5);
+
+@keyframes move {
+    from {
+       transform: translateY(0);
+    }
+    to {
+       transform: translateY(-30%);
+    }
+   }
+
+
+.logo-contact:hover img{
+    animation-play-state: paused;
 }
+.logo-contact img{
+    animation: 2s move infinite alternate;
+    }
+/*l'anim marche mais voir l'effet et le mettre que sur img*/
