@@ -489,14 +489,30 @@ h1, h3 {
 /* Pour les écrans de 768 à 991 pixels de large (tablettes) */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     
-}
+    #a-propos{   
+        height: 60vh;
+    }
+    
+    #competences{
+        height: 100vh;
+    }
 
+    #projets {
+        --carousel-height: 35.75rem;
+    }
+
+    #contact {
+        height: 30vh;
+    }
+   /*peut étre plus jouer sur le texte afin d'avoir page complète pour chaque el, jouer sur marg 
+   pour que chaque partie soit aérer*/
+}
 /* Pour les écrans de 992 à 1199 pixels de large (ordinateurs portables) */
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
+@media only screen and (min-width: 992px ) and ( max-width : 1199px ) {
 
 }
 
 /* Pour les écrans de 1200 pixels de large et plus (ordinateurs de bureau) */
-@media only screen and (min-width: 1200px) {
-  
+@media only screen and (min-width : 1200px) {
+
 }
