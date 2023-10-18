@@ -27,3 +27,27 @@ document.querySelector('.carousel-button.next').addEventListener('click', () => 
 
 // Afficher la première diapositive au chargement de la page
 showSlide(currentIndex);
+
+/*
+const nav = document.querySelector("nav");
+let isActive= false;
+document.querySelector('#icons').addEventListener('click', ()=>{
+    isActive=!isActive;
+    if(isActive){
+        nav.classList.add("active")
+    }else{
+        nav.classList.remove("active")
+    }
+});*/
+
+const nav = document.querySelector("nav");
+document.querySelector('#icons').addEventListener('click', ()=>{
+   nav.classList.toggle("active");
+});
+
+const links = document.querySelectorAll("nav li");
+
+links.forEach((link)=>{
+    link.addEventListener("click",()=>
+    nav.classList.remove("active"));
+});

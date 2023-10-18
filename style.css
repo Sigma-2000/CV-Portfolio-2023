@@ -73,6 +73,11 @@ nav a:hover {
     border-bottom: 0.188rem solid rgb(220, 178, 122);
 }
 
+#icons {
+    cursor: pointer;
+    display: none;
+}
+
 #accueil {
     margin-top: 0;
     background-image: url(images/rain-code\ pres.png);
@@ -246,7 +251,7 @@ h1, h3 {
 }
 
    
-#projets{
+.projets-slider{
     --carousel-height: 43.75rem;
 }
   
@@ -401,7 +406,7 @@ h1, h3 {
     }
 
 
-/* Pour les écrans jusqu'à 767 pixels de large (smartphones) */
+/* Pour les écrans jusqu'à 767 pixels de large (smartphones) avec ipad mini pro ? 796 ?  */
 @media only screen and (max-width: 767px) {
     body {
         font-size: 0.75em; 
@@ -409,6 +414,47 @@ h1, h3 {
 
     h1 {
         font-size: 2em; /
+    }
+    
+    header {
+        height: 2.188rem;
+    }
+
+    header img {
+        width: 7.5rem;
+    }
+
+    #icons {
+        display: block;
+    }
+    #icons:before {
+        content:"\2630";
+    }
+    .active #icons:before {
+        content:"\2613";
+    }
+    nav ul {
+        position: fixed;/*sticky ? position top : 5px??*/
+        right: -200%;/*pbm avec 100, il faut le mettre à 0 pour qu'il prenne bien sa place après...
+        vien surement des réglages fais en haut comme pour mar-left pour li !*/
+        flex-direction: column;
+        text-align: center;
+        background-color: #fff;
+        width: 100%;
+        justify-content: space-evenly;
+        height: 7.5rem;
+        transition: 0.25s;
+    }
+
+    nav li{
+        margin-left:0;
+    }
+    nav li:hover {
+        background-color: #ebe8e8;
+    }
+
+    nav.active ul{
+        right: 0%;
     }
 
     #a-propos{   
@@ -439,16 +485,13 @@ h1, h3 {
         font-size: 0.813em;
     }
     
-    #projets{
+    .projets-slider{
         --carousel-height: 18.75rem;
-    }
-    .carousel {
-        height:var(--carousel-height); 
     }
          
     .slide img {
         width: 100%; 
-        height: var(--carousel-height);
+        /*height: var(--carousel-height);*/
     }
         
     .slide .slide-legend {
@@ -490,15 +533,19 @@ h1, h3 {
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     
     #a-propos{   
-        height: 60vh;
+        height: 80vh;
     }
     
     #competences{
         height: 100vh;
     }
 
-    #projets {
-        --carousel-height: 35.75rem;
+    #projets{
+        margin-top: 50px;
+    }
+
+    .projets-slider{
+        --carousel-height: 28.125rem;
     }
 
     #contact {
