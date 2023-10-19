@@ -397,14 +397,12 @@ h1, h3 {
     }
    }
 
-
 .logo-contact:hover img{
     animation-play-state: paused;
 }
 .logo-contact img{
     animation: 2s move infinite alternate;
     }
-
 
 /* Pour les écrans jusqu'à 767 pixels de large (smartphones) avec ipad mini pro ? 796 ?  */
 @media only screen and (max-width: 767px) {
@@ -421,11 +419,12 @@ h1, h3 {
     }
 
     header img {
-        width: 7.5rem;
+        width: 8.5em;
     }
 
     #icons {
         display: block;
+        font-size: 1.5em;
     }
     #icons:before {
         content:"\2630";
@@ -434,7 +433,8 @@ h1, h3 {
         content:"\2613";
     }
     nav ul {
-        position: fixed;/*sticky ? position top : 5px??*/
+        position: fixed;
+        top: 10px;/*sticky ? position top : 5px??*/
         right: -200%;/*pbm avec 100, il faut le mettre à 0 pour qu'il prenne bien sa place après...
         vien surement des réglages fais en haut comme pour mar-left pour li !*/
         flex-direction: column;
@@ -485,6 +485,7 @@ h1, h3 {
         font-size: 0.813em;
     }
     
+   
     .projets-slider{
         --carousel-height: 18.75rem;
     }
