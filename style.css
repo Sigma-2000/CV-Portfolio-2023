@@ -235,7 +235,8 @@ h1, h3 {
 }
 
 .btn-cv a {
-    text-decoration: none;    
+    text-decoration: none; 
+    color: black;   
 }
 
 .btn-cv:hover, .btn-cv:focus {
@@ -485,7 +486,9 @@ h1, h3 {
         font-size: 0.813em;
     }
     
-   
+    #projets{
+       height: 100vh; 
+    }
     .projets-slider{
         --carousel-height: 18.75rem;
     }
