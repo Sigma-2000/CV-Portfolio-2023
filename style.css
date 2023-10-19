@@ -110,16 +110,20 @@ h1, h3 {
     box-shadow: 0.438rem 0.438rem 0 0 #222; 
 }
 
-#two{
+#one{
     width: 7.813rem;
 }
 
-#three{
+#two{
     width: 12.5rem;
 }
 
-#four{
+#three{
     width: 7.5rem;
+}
+
+#four{
+    width:12.5rem;
 }
 
 #five{
@@ -129,8 +133,6 @@ h1, h3 {
 #a-propos {
     height: 100vh;
     margin-top: 0;
-    background-image: url(images/texture-du-papier.jpg);
-    background-size: cover; 
 }
 
 .content {
@@ -139,15 +141,19 @@ h1, h3 {
     align-items: center; 
     text-align: center;
 }
-
+/*créer autre contenant avec cete effet*/
 .content img {
     margin-top: 1.3rem;
 }
 
 #text-about{
-
-    width: 70%;
+    margin: 25px;
+    width: 60%;
+    height: 80%;
+    background-color: #fff;
+    border-radius:0.938rem;
     min-width: 12.5rem;
+    
 }
 
 #competences {
@@ -251,6 +257,9 @@ h1, h3 {
     color: white;
 }
 
+#projets{
+    height: 200vh;
+}
    
 .projets-slider{
     --carousel-height: 43.75rem;
@@ -350,6 +359,52 @@ h1, h3 {
         
 .carousel-button.next {
     right:2rem;
+}
+
+.projets-details{
+    display: flex;
+    justify-content: space-around ;
+    align-items: center;
+    align-content: center; 
+}
+.projet-1{
+    display:flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center; 
+    text-align:center;
+    background-color: white;
+    border-radius: 0.938rem;
+    max-width: 20rem; /* Ajoutez une valeur appropriée en pixels ou en pourcentage pour limiter la largeur maximale */
+    padding: 2rem; 
+}
+.projet-1 img{
+    height: 12.5rem;
+   }
+
+.projet-1 p{
+    font-size: 1rem;
+   }
+
+
+.projet-2 {
+    display:flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center; 
+    text-align: center; 
+    background-color: white;
+    border-radius: 0.938rem;
+    max-width: 21rem; /* Ajoutez une valeur appropriée en pixels ou en pourcentage pour limiter la largeur maximale */
+    padding: 2rem; 
+   }
+
+.projet-2 p {
+    font-size: 1rem;
+}
+
+.projet-2 img{
+ height: 20rem;
 }
 
 #contact {
@@ -461,8 +516,12 @@ h1, h3 {
     #a-propos{   
         height: 100vh;
     }
+    #text-about{
+        margin: 10px;
+        padding:0.3rem;
+    }
     .content img {
-    width: 12.5rem;
+    width: 9.5rem;
     }
 
     #competences{
@@ -520,6 +579,34 @@ h1, h3 {
     .carousel-button.next {
         right:0.5rem;
     }
+
+.projets-details h4{
+    font-size: 1rem;
+}
+.projet-1{
+    max-width: 8rem; 
+    padding: 0.4rem;
+}
+.projet-1 img{
+    height: 3rem;
+   }
+
+.projet-1 p{
+    font-size: 0.5rem;
+   }
+
+.projet-2 {
+    max-width: 8rem; 
+    padding: 0.4rem;
+   
+}
+.projet-2 p {
+    font-size: 0.5rem;
+}
+
+.projet-2 img{
+ height: 8rem;
+}
     
     #contact {
         height: 20vh;
@@ -546,6 +633,7 @@ h1, h3 {
 
     #projets{
         margin-top: 50px;
+        height: 100vh;
     }
 
     .projets-slider{
