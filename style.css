@@ -623,35 +623,63 @@ h1, h3 {
 /* Pour les écrans de 768 à 991 pixels de large (tablettes) */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     
+    #icons {
+        display: block;
+        font-size: 1.5em;
+    }
+    #icons:before {
+        content:"\2630";
+    }
+    .active #icons:before {
+        content:"\2613";
+    }
+    nav ul {
+        position: fixed;
+        top: 10px;/*sticky ? position top : 5px??*/
+        right: -200%;/*pbm avec 100, il faut le mettre à 0 pour qu'il prenne bien sa place après...
+        vien surement des réglages fais en haut comme pour mar-left pour li !*/
+        flex-direction: column;
+        text-align: center;
+        background-color: #fff;
+        width: 100%;
+        justify-content: space-evenly;
+        height: 7.5rem;
+        transition: 0.25s;
+    }
+
+    nav li{
+        margin-left:0;
+    }
+    nav li:hover {
+        background-color: #ebe8e8;
+    }
+
+    nav.active ul{
+        right: 0%;
+    }
     #a-propos{   
-        height: 80vh;
+        height: 120vh;
     }
     
     #competences{
-        height: 100vh;
+        height: 200vh;
     }
 
     #projets{
-        margin-top: 50px;
-        height: 100vh;
-    }
-
+        height: 200vh;
+    } 
     .projets-slider{
         --carousel-height: 28.125rem;
     }
-
-    #contact {
-        height: 30vh;
-    }
+     #contact {
+         height: 30vh;
+     }
+  
    /*peut étre plus jouer sur le texte afin d'avoir page complète pour chaque el, jouer sur marg 
    pour que chaque partie soit aérer*/
 }
 /* Pour les écrans de 992 à 1199 pixels de large (ordinateurs portables) */
 @media only screen and (min-width: 992px ) and ( max-width : 1199px ) {
 
-}
-
-/* Pour les écrans de 1200 pixels de large et plus (ordinateurs de bureau) */
-@media only screen and (min-width : 1200px) {
 
 }
