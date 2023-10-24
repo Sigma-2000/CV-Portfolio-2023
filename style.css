@@ -460,8 +460,170 @@ h1, h3 {
     animation: 2s move infinite alternate;
     }
 
-/* Pour les écrans jusqu'à 767 pixels de large (smartphones) avec ipad mini pro ? 796 ?  */
-@media only screen and (max-width: 767px) {
+    /*Responsive*/
+/*pour les petits écrans types i-phone 5 avec 548 de hauteur*/
+@media only screen and (max-width: 320px ) {
+    body {
+        font-size: 0.4em; 
+    }
+
+    h1 {
+        font-size: 2em; /
+    }
+    
+    header {
+        height: 2.188rem;
+    }
+
+    header img {
+        width: 8.5em;
+    }
+
+    #icons {
+        display: block;
+        font-size: 1.5em;
+    }
+    #icons:before {
+        content:"\2630";
+    }
+    .active #icons:before {
+        content:"\2613";
+    }
+    nav ul {
+        position: fixed;
+        top: 10px;/*sticky ? position top : 5px??*/
+        right: -200%;/*pbm avec 100, il faut le mettre à 0 pour qu'il prenne bien sa place après...
+        vien surement des réglages fais en haut comme pour mar-left pour li !*/
+        flex-direction: column;
+        text-align: center;
+        background-color: #fff;
+        width: 100%;
+        justify-content: space-evenly;
+        height: 7.5rem;
+        transition: 0.25s;
+    }
+
+    nav li{
+        margin-left:0;
+    }
+    nav li:hover {
+        background-color: #ebe8e8;
+    }
+
+    nav.active ul{
+        right: 0%;
+    }
+
+    #a-propos{   
+        height: 100vh;
+    }
+    #text-about{
+        margin: 10px;
+        font-size: 0.5rem;
+        padding:0.3rem;
+    }
+    .content img {
+    width: 7.5rem;
+    }
+
+    #competences{
+        height: 100vh;
+    }
+    .logos{
+        padding: 0.7rem;
+    }
+    .logos-slide img {
+        height: 2.5rem; 
+    }
+    .cv {
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+    }
+    .cv img{
+        width: 15.75rem;
+    }
+    .btn-cv {
+        font-size: 0.625em;
+    }
+    
+    #projets{
+       height: 100vh; 
+    }
+    .projets-slider{
+        --carousel-height: 18.75rem;
+    }
+         
+    .slide img {
+        width: 100%; 
+        /*height: var(--carousel-height);*/
+    }
+        
+    .slide .slide-legend {
+        width: 100%; 
+        font-size: 0.813em;
+        padding: 0.313rem 4.906rem 0.313rem 0.313rem;
+    }
+  
+    .slide .slide-link{
+        right: 0.313rem;
+    }
+
+    .carousel-button {
+        font-size: 2em;
+        top: 50%;
+    }
+
+    .carousel-button.prev {
+        left:0.5rem;
+    }
+            
+    .carousel-button.next {
+        right:0.5rem;
+    }
+
+    .projets-details h4{
+        font-size: 0.7rem;
+    }
+    .projet-1{
+        max-width: 7rem; 
+        padding: 0.2rem;
+    }
+    .projet-1 img{
+        height: 2rem;
+    }
+
+    .projet-1 p{
+        font-size: 0.4rem;
+    }
+
+    .projet-2 {
+        max-width: 7rem; 
+        padding: 0.2rem;
+    
+    }
+    .projet-2 p {
+        font-size: 0.4rem;
+    }
+
+    .projet-2 img{
+    height: 5rem;
+    }
+        
+    #contact {
+        height: 20vh;
+    }
+    #contact img {
+        width: 1.5rem;  
+    }
+    .logo-contact {
+        font-size: 0.4rem;
+    }
+    
+
+    }
+/* Pour les écrans jusqu'à 767 pixels de large (smartphones) */
+@media only screen and (min-width:721px) and (max-width: 767px) {
     body {
         font-size: 0.75em; 
     }
@@ -580,34 +742,34 @@ h1, h3 {
         right:0.5rem;
     }
 
-.projets-details h4{
-    font-size: 1rem;
-}
-.projet-1{
-    max-width: 8rem; 
-    padding: 0.4rem;
-}
-.projet-1 img{
-    height: 3rem;
-   }
+    .projets-details h4{
+        font-size: 1rem;
+    }
+    .projet-1{
+        max-width: 8rem; 
+        padding: 0.4rem;
+    }
+    .projet-1 img{
+        height: 3rem;
+    }
 
-.projet-1 p{
-    font-size: 0.5rem;
-   }
+    .projet-1 p{
+        font-size: 0.5rem;
+    }
 
-.projet-2 {
-    max-width: 8rem; 
-    padding: 0.4rem;
-   
-}
-.projet-2 p {
-    font-size: 0.5rem;
-}
-
-.projet-2 img{
- height: 8rem;
-}
+    .projet-2 {
+        max-width: 8rem; 
+        padding: 0.4rem;
     
+    }
+    .projet-2 p {
+        font-size: 0.5rem;
+    }
+
+    .projet-2 img{
+    height: 8rem;
+    }
+        
     #contact {
         height: 20vh;
     }
@@ -622,7 +784,13 @@ h1, h3 {
 
 /* Pour les écrans de 768 à 991 pixels de large (tablettes) */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-    
+    body {
+        font-size: 0.75em; 
+    }
+
+    h1 {
+        font-size: 2em; /
+    }
     #icons {
         display: block;
         font-size: 1.5em;
@@ -658,15 +826,15 @@ h1, h3 {
         right: 0%;
     }
     #a-propos{   
-        height: 120vh;
+        height: 100vh;
     }
     
     #competences{
-        height: 200vh;
+        height: 100vh;
     }
 
     #projets{
-        height: 200vh;
+        height: 100vh;
     } 
     .projets-slider{
         --carousel-height: 28.125rem;
@@ -674,10 +842,94 @@ h1, h3 {
      #contact {
          height: 30vh;
      }
+
+    #text-about{
+        margin: 10px;
+        padding:0.3rem;
+    }
+    .content img {
+    width: 9.5rem;
+    }
+
+    .logos{
+        padding: 1rem;
+    }
+    .logos-slide img {
+        height: 3rem; 
+    }
+   
+    .cv img{
+        width: 18.75rem;
+    }
+    .btn-cv {
+        font-size: 0.813em;
+    }
+    
+    #projets{
+       height: 100vh; 
+    }
+    .projets-slider{
+        --carousel-height: 18.75rem;
+    }
+         
+    .slide img {
+        width: 100%; 
+        /*height: var(--carousel-height);*/
+    }
+        
+    .slide .slide-legend {
+        width: 100%; 
+        font-size: 0.813em;
+        padding: 0.313rem 4.906rem 0.313rem 0.313rem;
+    }
   
-   /*peut étre plus jouer sur le texte afin d'avoir page complète pour chaque el, jouer sur marg 
-   pour que chaque partie soit aérer*/
+    .slide .slide-link{
+        right: 0.313rem;
+    }
+
+    .carousel-button {
+        font-size: 2em;
+        top: 50%;
+    }
+
+    .projets-details h4{
+        font-size: 1rem;
+    }
+    .projet-1{
+        padding: 0.6rem;
+    }
+    .projet-1 img{
+        height: 4rem;
+    }
+
+    .projet-1 p{
+        font-size: 0.6rem;
+    }
+
+    .projet-2 {
+        padding: 0.4rem;
+    
+    }
+    .projet-2 p {
+        font-size: 0.6rem;
+    }
+
+    .projet-2 img{
+    height: 9rem;
+    }
+        
+   
+    #contact img {
+        width: 3rem;  
+    }
+    .logo-contact {
+        font-size: 0.7rem;
+    }
+    
 }
+
+  
+
 /* Pour les écrans de 992 à 1199 pixels de large (ordinateurs portables) */
 @media only screen and (min-width: 992px ) and ( max-width : 1199px ) {
 
