@@ -1,40 +1,96 @@
+@font-face {
+    font-family: 'lora';
+    src: url('font/lora.eot') format('eot'),
+    url('font/lora.svg') format('svg'),
+    url('font/lora.eot') format('ttf'),
+    url('font/lora.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+	font-family:'crenzo';
+	src: url('font/CRENZO.otf') format('otf'),
+		 url('font/CRENZO.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
 
 html {
 	scroll-behavior: smooth;
+    scroll-padding: 3.75rem;;
 }
 
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: antiquewhite;
-    }
+    background: #e4e4ff;
+    /*background: #2a2a67;*/
+}
+    
+.noise-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: #000; 
+    opacity: 0.1; 
+  }
+  
+  @keyframes noise-animation {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 100%;}
+  }
+    
+  .noise-bg {
+    background-image: url(images/fond-noisy.jpg); 
+    background-size: cover;
+    animation: noise-animation 2s steps(10) infinite; /* Vitesse et nombre d'étapes de l'animation */
+  }
 
 h1 {
     color: white;  
     text-transform: uppercase;
     text-align: center; 
-    font-size: 2.5em;
+    font-size: 40px;
     margin-top: 0;
+    font-family:'Syne', sans-serif;
+    /*animation: typing 3.5s steps(21);*/
 }
-
+/*
+@keyframes typing {
+    from {width:0}
+    to {width: 100%;}
+}
+*/
 h2 {
     text-transform: uppercase; 
+    font-family:'Syne', sans-serif;
 }
 
 h3 {
     color:white;  
     text-transform: uppercase;
     text-align: center; 
-    font-size: 1.7em; 
+    font-size: 1.7rem; 
+    font-family:'Syne', sans-serif;
 }
 
 h4 {
     font-size: 1.4em;
+    font-family:'Syne', sans-serif;
 }
 
 p {
-    font-size: 0.938em ; /*écris plus longue bio ou 1.2*/
+    font-size: 0.938rem ; 
+    font-family: 'lora', sans-serif;
+}
+
+span {
+    font-weight:bold ;
 }
 
 header {
@@ -47,8 +103,7 @@ header {
     left: 0;
     right: 0;
     position: sticky;
-    z-index: 1000;
-  
+    z-index: 1000;  
 }
 
 nav ul {
@@ -61,7 +116,8 @@ nav li {
 }
 
 nav a {
-    font-size: 1.3em;
+    font-size: 1.3rem;
+    font-family: 'lora', sans-serif;
     color: #181818;
     padding-bottom: 0.188rem;
     text-decoration: none;
@@ -69,14 +125,15 @@ nav a {
 }
 
 nav a:hover {
-    color: rgb(220, 178, 122);
-    border-bottom: 0.188rem solid rgb(220, 178, 122);
+    color: #a7a7ee;
+    border-bottom: 0.188rem solid #a7a7ee;
 }
 
 #icons {
     cursor: pointer;
     display: none;
 }
+/***Accueil***/
 
 #accueil {
     margin-top: 0;
@@ -89,6 +146,12 @@ nav a:hover {
     align-items: center; 
 }
 
+#accueil p {
+   color: white;
+   font-family: 'lora', sans-serif;
+}
+
+/*
 @keyframes title-slide {
     0% {
         transform: translateY(-100%);
@@ -102,135 +165,140 @@ nav a:hover {
 
 h1, h3 {
     animation: title-slide 1s ease-in-out forwards;
-}
+}*/
 
-.titre-conteneur{
+/***titre section***/
+.titre-conteneur {
     margin-top: 0;
     background-color: #fff;
     box-shadow: 0.438rem 0.438rem 0 0 #222; 
+    padding: 0 1rem 0 1rem;
+    
 }
 
-#one{
+#one {
     width: 7.813rem;
+    width: fit-content;
 }
 
-#two{
+#two {
     width: 12.5rem;
+    width: fit-content;
 }
 
-#three{
+#three {
     width: 7.5rem;
+    width: fit-content;
 }
 
-#four{
+#four {
     width:12.5rem;
+    width: fit-content;
 }
-
-#five{
-    width:12.5rem;
-}
+/***presentation AG***/
 
 #a-propos {
     height: 100vh;
     margin-top: 0;
 }
-
 .content {
     display: flex;
-    flex-direction: column; 
-    align-items: center; 
-    text-align: center;
-}
-/*créer autre contenant avec cete effet*/
-.content img {
-    margin-top: 1.3rem;
+    justify-content: space-between;
 }
 
-#text-about{
-    margin: 25px;
-    width: 60%;
-    height: 80%;
+.content-presentation {
+    flex: 2;
+    margin-right: 20px;
+}
+
+.content-presentation img{
+    width: 200px;
+    margin-left: 80px;
+}
+
+#text-about {
+    margin-top: 15px;
+    margin-left: 60px;
     background-color: #fff;
     border-radius:0.938rem;
     min-width: 12.5rem;
-    
+    padding: 1rem;  
+    border: 1px solid #707070;
+    box-shadow: 1rem 1rem 0 black 
 }
+
+.content-passion {
+    flex: 1;
+    /*display: flex;*/
+    flex-direction: column;
+    /*gap: 10px;*/
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+figure img {
+    width: 190px;
+}
+
+figcaption {
+    color: #222;
+    font-family: 'lora', sans-serif;
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-align: center; 
+}
+
+/***competences***/
 
 #competences {
-    height: 170vh;
+    height: 100vh;
 }
 
-@keyframes slide {
- from {
-    transform: translateX(0);
- }
- to {
-    transform: translateX(-100%);
- }
+.content-cv {
+    display: flex;
+    justify-content: space-evenly;
 }
-
-.logos {
-    overflow: hidden;
-    padding: 3.75rem 0;
-    background: white;
-    white-space: nowrap;
-    position: relative;
-}
-
-.logos::before,
-.logos::after {
-    position: absolute;
-    top:0;
-    width: 15.625rem;
-    height: 100%;
-    content:"";
-    z-index: 2;
-}
-
-.logos::before {
-    left: 0;
-    background: linear-gradient(to left,transparent, white);
-}
-
-.logos::after {
-    right: 0;
-    background: linear-gradient(to right,transparent, white);
-}
-
-.logos:hover .logos-slide {
-    animation-play-state: paused;
-}
-
-.logos-slide {
-    display: inline-block;
-    animation: 10s slide infinite linear;
-    }
-
-.logos-slide img {
-    height: 5rem; 
-    margin: 0 2.5rem ;
-}
-
-.cv img{
-    width: 37.5rem;
-    margin-top: 1.3rem;
-    margin-bottom: 1.3rem;
-}
-
 .cv {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+}
+
+.cv img {
+    width: 45%;
+   /* margin-top: 20px;*/
+}
+
+#more {
+   /* position: absolute ;*/
+    margin-bottom: 25px;
+    /*margin-top: 20px;*/
+    width: fit-content;
+    /*transform: translateY(6rem) ;*/
+    background-color: #fff;
+    font-family: 'lora', sans-serif;
+    font-size: 0.938rem;
+    border-radius:0.938rem;
+    min-width: 12.5rem;
+    padding: 0.5rem; 
+    z-index: 3;
+    border: 1px solid #707070;
+    box-shadow: 1rem 1rem 0 black;
 }
 
 .btn-cv {
     margin-left: 0.625rem;
     position: relative;
     padding: 0.8rem 1.6rem;
-    font-family: auto;
+    margin: 15px;
+    font-family: 'lora', sans-serif;
     font-weight: 900;
     text-transform: uppercase;
-    font-size: 1em;
+    font-size: 0.938rem;
     color: black;
     text-align: left;
     cursor: pointer;
@@ -242,7 +310,8 @@ h1, h3 {
 
 .btn-cv a {
     text-decoration: none; 
-    color: black;   
+    color: black; 
+    font-family: 'lora', sans-serif;  
 }
 
 .btn-cv:hover, .btn-cv:focus {
@@ -257,75 +326,122 @@ h1, h3 {
     color: white;
 }
 
-#projets{
-    height: 200vh;
+#auto-formation {
+    /*position: relative;*/
+    margin-bottom: 25px;
+    /*margin-top: 20px;*/
+    width: fit-content;
+    height: 80%;
+    background-color: #fff;
+    font-family: 'lora', sans-serif;
+    font-size: 0.938rem;
+    border-radius:0.938rem;
+    border: 1px solid #707070;
+    box-shadow: 1rem 1rem 0 black;
+    min-width: 12.5rem;
+    padding: 1rem;
+    z-index: 2;  
+}
+
+@keyframes slide {
+    from {
+       transform: translateX(0);
+    }
+    to {
+       transform: translateX(-100%);
+    }
 }
    
-.projets-slider{
-    --carousel-height: 43.75rem;
+.logos {
+    overflow: hidden;
+    padding: 1rem 0;
+    margin-top: 20px;
+    background: white;
+    white-space: nowrap;
+    position: relative;
+}
+   
+.logos::before,
+.logos::after {
+    position: absolute;
+    top:0;
+    width: 15.625rem;
+    height: 100%;
+    content:"";
+    z-index: 2;
+}
+   
+.logos::before {
+    left: 0;
+    background: linear-gradient(to left,transparent, white);
+}
+   
+.logos::after {
+    right: 0;
+    background: linear-gradient(to right,transparent, white);
+}
+   
+.logos:hover .logos-slide {
+    animation-play-state: paused;
+}
+   
+.logos-slide {
+    display: inline-block;
+    animation: 10s slide infinite linear;
+}
+   
+.logos-slide img {
+    height: 4rem; 
+    margin: 0 2.5rem ;
+}
+
+/***projets***/
+
+#projets {
+    height: 280vh;
 }
   
-.carousel {
-    height: var(--carousel-height);
-    position: relative;
-    overflow: hidden;
-}
-       
-.slide {
-    position: absolute;
-    width: 100%;
-    opacity: 0;
+.projet {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    background-color: #fff;
+    border-radius:0.938rem;
+    padding: 0.5rem; 
+    z-index: 3;
+    border: 1px solid #707070;
+    box-shadow: 1rem 1rem 0 black;
+    margin-left:20px;
+    margin-right:20px;
+    margin-bottom: 30px;
 }
 
 .slide.active {
     z-index:1; 
     opacity:1;
+    position: relative;
 }
-    
-.slide img {
-    width: 90%; 
-    height:var(--carousel-height); 
-    object-fit: contain;
-    display: block; 
-    margin: 0 auto;  
-}
-    
-.slide .slide-legend {
-    z-index: 2;
-    background-color: rgba(0, 0, 0, .7);
-    color: white;
+
+.slide {
+    opacity: 0;
     position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding: 0.625rem 7.8125rem 0.625rem 0.625rem;
-    box-sizing: border-box;
 }
-    
-.slide .slide-hl {
-    margin-top: 0;
-    font-family: 'Roboto Slab Regular', sans-serif;
+
+.slide img{
+    margin-left:20px;
+    width: 70%;
+    height: auto;
+    border: 1px solid #707070;
 }
-    
-.slide .slide-text {
-    font-family: 'Roboto Slab Light', sans-serif;
-    margin: 0;
-    font-size: 0.938em;
+
+.carousel {
+    position: relative;
+    display: inline-block;
 }
-    
-.slide .slide-link {
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-family: 'Roboto Slab Regular', sans-serif;
-    position: absolute;
-    right: 0.625rem;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: color 400ms;
-}
-    
-.slide .slide-link:hover {
-    color: rgb(220, 178, 122);
+.carousel-text {
+    font-family: 'lora';
+    margin-right:20px;
+    width: 80%;
 }
 
 .carousel-button {
@@ -333,16 +449,16 @@ h1, h3 {
     z-index: 2;
     background: none;
     border: none;
-    font-size: 3rem;
+    font-size: 2rem;
     top: 50%;
     transform: translateY(-50%);
     color: rgba(225,225,225,.5);
     cursor: pointer;
     border-radius: .25rem;
     padding: 0 .5rem;
-    background: rgba(0,0,0,.1);
+    background: rgba(0,0,0,.1); 
 }
-     
+    
 .carousel-button:hover, 
 .carousel-button:focus {
     color:white;
@@ -354,38 +470,46 @@ h1, h3 {
 }
     
 .carousel-button.prev {
-    left:1rem;
+    left:6%;
 }
         
 .carousel-button.next {
-    right:2rem;
+    left:65%;
 }
 
-.projets-details{
+.projets-details {
     display: flex;
     justify-content: space-around ;
     align-items: center;
     align-content: center; 
 }
-.projet-1{
+
+.projet-1 {
     display:flex;
     flex-direction: column;
     align-content: center;
     align-items: center; 
-    text-align:center;
-    background-color: white;
-    border-radius: 0.938rem;
-    max-width: 20rem; /* Ajoutez une valeur appropriée en pixels ou en pourcentage pour limiter la largeur maximale */
-    padding: 2rem; 
+    text-align: center; 
+    font-family: 'lora', sans-serif;
+    font-size: 0.938rem;
+    max-width: 21rem; 
+    margin-bottom: 25px;
+    width: fit-content;
+    background-color: #fff;
+    border-radius:0.938rem;
+    padding: 0.5rem; 
+    z-index: 3;
+    border: 1px solid #707070;
+    box-shadow: 1rem 1rem 0 black;
 }
-.projet-1 img{
+
+.projet-1 img {
     height: 12.5rem;
    }
 
-.projet-1 p{
+.projet-1 p {
     font-size: 1rem;
    }
-
 
 .projet-2 {
     display:flex;
@@ -393,22 +517,25 @@ h1, h3 {
     align-content: center;
     align-items: center; 
     text-align: center; 
-    background-color: white;
-    border-radius: 0.938rem;
-    max-width: 21rem; /* Ajoutez une valeur appropriée en pixels ou en pourcentage pour limiter la largeur maximale */
-    padding: 2rem; 
-   }
+    font-family: 'lora', sans-serif;
+    font-size: 0.938rem;
+    max-width: 21rem; 
+    margin-bottom: 25px;
+    width: fit-content;
+    background-color: #fff;
+    border-radius:0.938rem;
+    padding: 0.5rem; 
+    z-index: 3;
+    border: 1px solid #707070;
+    box-shadow: 1rem 1rem 0 black;
+}
 
 .projet-2 p {
     font-size: 1rem;
 }
 
-.projet-2 img{
+.projet-2 img {
  height: 20rem;
-}
-
-#contact {
-    height: 40vh; 
 }
 
 #contact img {
@@ -420,7 +547,8 @@ h1, h3 {
     justify-content: space-around ;
     align-items: center;
     align-content: center; 
-    background-color: #fff;
+    background-image: url(images/rain-code1.png);
+    height: 30vh;
 }
 
 #linkedin {
@@ -428,6 +556,9 @@ h1, h3 {
     flex-direction: column;
     align-content: center;
     align-items: center;
+    color: #fff;
+    text-transform: uppercase;
+
 }
 
 #mail {
@@ -435,6 +566,8 @@ h1, h3 {
     flex-direction: column;
     align-content: center;
     align-items: center;
+    color: #fff;
+    text-transform: uppercase;
 }
 
 #github-logo {
@@ -442,8 +575,11 @@ h1, h3 {
     flex-direction: column;
     align-content: center;
     align-items: center; 
+    color: #fff;
+    text-transform: uppercase;
+   
 }
-
+/*
 @keyframes move {
     from {
        transform: translateY(0);
@@ -458,37 +594,49 @@ h1, h3 {
 }
 .logo-contact img{
     animation: 2s move infinite alternate;
-    }
+    }*/
 
-    /*Responsive*/
+/***Responsive***/
 /*pour les petits écrans types i-phone 5 avec 548 de hauteur*/
-@media only screen and (max-width: 320px ) {
-    body {
-        font-size: 0.4em; 
+@media only screen and (min-width: 0px ) and (max-width: 320px) {
+
+    html {
+        scroll-padding: 2.4rem;;
     }
 
-    h1 {
-        font-size: 2em; /
+    h1{
+        font-size: 25px;;
     }
-    
+
+    h3{
+        font-size: 1.3rem;
+    }
+
+    h4{
+        font-size: 1.2rem;
+    }
+ 
     header {
-        height: 2.188rem;
+        height: 2.4rem;
     }
 
     header img {
-        width: 8.5em;
+        width: 8.5rem;
     }
 
     #icons {
         display: block;
         font-size: 1.5em;
     }
+
     #icons:before {
         content:"\2630";
     }
+
     .active #icons:before {
         content:"\2613";
     }
+
     nav ul {
         position: fixed;
         top: 10px;/*sticky ? position top : 5px??*/
@@ -499,439 +647,431 @@ h1, h3 {
         background-color: #fff;
         width: 100%;
         justify-content: space-evenly;
-        height: 7.5rem;
+        height: 50%;
         transition: 0.25s;
     }
 
-    nav li{
+    nav li {
         margin-left:0;
     }
     nav li:hover {
         background-color: #ebe8e8;
     }
 
-    nav.active ul{
+    nav.active ul {
         right: 0%;
     }
 
-    #a-propos{   
-        height: 100vh;
-    }
-    #text-about{
-        margin: 10px;
-        font-size: 0.5rem;
-        padding:0.3rem;
-    }
-    .content img {
-    width: 7.5rem;
+    #a-propos {   
+        height: 350vh;
     }
 
-    #competences{
-        height: 100vh;
+    .content {
+        display: block;
     }
+
+    .content-presentation img {
+        width: 7.5rem;
+        margin-left: 20px;
+    }
+
+    #text-about {
+        margin: 10px;
+        padding:0.3rem;
+    }
+
+   .content-passion {
+    display: flex;
+    margin-top: 40px;
+   }
+
+    #competences {
+        height: 320vh;
+    }
+
+    .content-cv {
+        display: block;
+    }
+
+    #more {
+        margin: 5px 30px 35px 15px;
+    }
+
+    .cv img {
+        width: 15.75rem;
+    }
+    
+    #auto-formation {
+        margin: 5px 30px 30px 15px;
+    }
+
+    .logos::before,
+    .logos::after {
+        background: none;
+    }
+
     .logos{
         padding: 0.7rem;
     }
     .logos-slide img {
-        height: 2.5rem; 
-    }
-    .cv {
-        display: flex;
-        flex-direction: column; 
-        align-items: center; 
-    }
-    .cv img{
-        width: 15.75rem;
-    }
-    .btn-cv {
-        font-size: 0.625em;
+        height: 2.7rem; 
     }
     
-    #projets{
-       height: 100vh; 
-    }
-    .projets-slider{
-        --carousel-height: 18.75rem;
-    }
-         
-    .slide img {
-        width: 100%; 
-        /*height: var(--carousel-height);*/
-    }
-        
-    .slide .slide-legend {
-        width: 100%; 
-        font-size: 0.813em;
-        padding: 0.313rem 4.906rem 0.313rem 0.313rem;
-    }
-  
-    .slide .slide-link{
-        right: 0.313rem;
+    #projets {
+       height: 700vh; 
     }
 
-    .carousel-button {
-        font-size: 2em;
-        top: 50%;
+   .projet {
+    display: block;
+    padding: 1rem;
+    margin: 5px 30px 30px 15px;
+   }
+         
+    .slide img {
+        width: 100%;
+        margin:0;
     }
 
     .carousel-button.prev {
-        left:0.5rem;
+        left:2%;
     }
             
     .carousel-button.next {
-        right:0.5rem;
+        left:85%;
     }
 
-    .projets-details h4{
-        font-size: 0.7rem;
+    .projets-details {
+        display: block;
     }
-    .projet-1{
-        max-width: 7rem; 
+    .projet-1 {
+        margin: 5px 30px 30px 15px;
         padding: 0.2rem;
     }
-    .projet-1 img{
-        height: 2rem;
-    }
-
-    .projet-1 p{
-        font-size: 0.4rem;
+    
+    .projet-1 img {
+        height: 6rem;
     }
 
     .projet-2 {
-        max-width: 7rem; 
+        margin: 5px 30px 30px 15px;
         padding: 0.2rem;
-    
-    }
-    .projet-2 p {
-        font-size: 0.4rem;
     }
 
-    .projet-2 img{
-    height: 5rem;
+    .projet-2 img {
+    height: 10rem;
     }
         
-    #contact {
-        height: 20vh;
-    }
-    #contact img {
-        width: 1.5rem;  
-    }
-    .logo-contact {
-        font-size: 0.4rem;
-    }
-    
-
-    }
-/* Pour les écrans jusqu'à 767 pixels de large (smartphones) */
-@media only screen and (min-width:721px) and (max-width: 767px) {
-    body {
-        font-size: 0.75em; 
-    }
-
-    h1 {
-        font-size: 2em; /
-    }
-    
-    header {
-        height: 2.188rem;
-    }
-
-    header img {
-        width: 8.5em;
-    }
-
-    #icons {
-        display: block;
-        font-size: 1.5em;
-    }
-    #icons:before {
-        content:"\2630";
-    }
-    .active #icons:before {
-        content:"\2613";
-    }
-    nav ul {
-        position: fixed;
-        top: 10px;/*sticky ? position top : 5px??*/
-        right: -200%;/*pbm avec 100, il faut le mettre à 0 pour qu'il prenne bien sa place après...
-        vien surement des réglages fais en haut comme pour mar-left pour li !*/
-        flex-direction: column;
-        text-align: center;
-        background-color: #fff;
-        width: 100%;
-        justify-content: space-evenly;
-        height: 7.5rem;
-        transition: 0.25s;
-    }
-
-    nav li{
-        margin-left:0;
-    }
-    nav li:hover {
-        background-color: #ebe8e8;
-    }
-
-    nav.active ul{
-        right: 0%;
-    }
-
-    #a-propos{   
-        height: 100vh;
-    }
-    #text-about{
-        margin: 10px;
-        padding:0.3rem;
-    }
-    .content img {
-    width: 9.5rem;
-    }
-
-    #competences{
-        height: 100vh;
-    }
-    .logos{
-        padding: 1rem;
-    }
-    .logos-slide img {
-        height: 3rem; 
-    }
-    .cv {
-        display: flex;
-        flex-direction: column; 
-        align-items: center; 
-    }
-    .cv img{
-        width: 18.75rem;
-    }
-    .btn-cv {
-        font-size: 0.813em;
-    }
-    
-    #projets{
-       height: 100vh; 
-    }
-    .projets-slider{
-        --carousel-height: 18.75rem;
-    }
-         
-    .slide img {
-        width: 100%; 
-        /*height: var(--carousel-height);*/
-    }
-        
-    .slide .slide-legend {
-        width: 100%; 
-        font-size: 0.813em;
-        padding: 0.313rem 4.906rem 0.313rem 0.313rem;
-    }
-  
-    .slide .slide-link{
-        right: 0.313rem;
-    }
-
-    .carousel-button {
-        font-size: 2em;
-        top: 50%;
-    }
-
-    .carousel-button.prev {
-        left:0.5rem;
-    }
-            
-    .carousel-button.next {
-        right:0.5rem;
-    }
-
-    .projets-details h4{
-        font-size: 1rem;
-    }
-    .projet-1{
-        max-width: 8rem; 
-        padding: 0.4rem;
-    }
-    .projet-1 img{
-        height: 3rem;
-    }
-
-    .projet-1 p{
-        font-size: 0.5rem;
-    }
-
-    .projet-2 {
-        max-width: 8rem; 
-        padding: 0.4rem;
-    
-    }
-    .projet-2 p {
-        font-size: 0.5rem;
-    }
-
-    .projet-2 img{
-    height: 8rem;
-    }
-        
-    #contact {
-        height: 20vh;
-    }
-    #contact img {
-        width: 2rem;  
-    }
-    .logo-contact {
-        font-size: 0.5rem;
-    }
-    
-}
-
-/* Pour les écrans de 768 à 991 pixels de large (tablettes) */
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-    body {
-        font-size: 0.75em; 
-    }
-
-    h1 {
-        font-size: 2em; /
-    }
-    #icons {
-        display: block;
-        font-size: 1.5em;
-    }
-    #icons:before {
-        content:"\2630";
-    }
-    .active #icons:before {
-        content:"\2613";
-    }
-    nav ul {
-        position: fixed;
-        top: 10px;/*sticky ? position top : 5px??*/
-        right: -200%;/*pbm avec 100, il faut le mettre à 0 pour qu'il prenne bien sa place après...
-        vien surement des réglages fais en haut comme pour mar-left pour li !*/
-        flex-direction: column;
-        text-align: center;
-        background-color: #fff;
-        width: 100%;
-        justify-content: space-evenly;
-        height: 7.5rem;
-        transition: 0.25s;
-    }
-
-    nav li{
-        margin-left:0;
-    }
-    nav li:hover {
-        background-color: #ebe8e8;
-    }
-
-    nav.active ul{
-        right: 0%;
-    }
-    #a-propos{   
-        height: 100vh;
-    }
-    
-    #competences{
-        height: 100vh;
-    }
-
-    #projets{
-        height: 100vh;
-    } 
-    .projets-slider{
-        --carousel-height: 28.125rem;
-    }
-     #contact {
-         height: 30vh;
-     }
-
-    #text-about{
-        margin: 10px;
-        padding:0.3rem;
-    }
-    .content img {
-    width: 9.5rem;
-    }
-
-    .logos{
-        padding: 1rem;
-    }
-    .logos-slide img {
-        height: 3rem; 
-    }
-   
-    .cv img{
-        width: 18.75rem;
-    }
-    .btn-cv {
-        font-size: 0.813em;
-    }
-    
-    #projets{
-       height: 100vh; 
-    }
-    .projets-slider{
-        --carousel-height: 18.75rem;
-    }
-         
-    .slide img {
-        width: 100%; 
-        /*height: var(--carousel-height);*/
-    }
-        
-    .slide .slide-legend {
-        width: 100%; 
-        font-size: 0.813em;
-        padding: 0.313rem 4.906rem 0.313rem 0.313rem;
-    }
-  
-    .slide .slide-link{
-        right: 0.313rem;
-    }
-
-    .carousel-button {
-        font-size: 2em;
-        top: 50%;
-    }
-
-    .projets-details h4{
-        font-size: 1rem;
-    }
-    .projet-1{
-        padding: 0.6rem;
-    }
-    .projet-1 img{
-        height: 4rem;
-    }
-
-    .projet-1 p{
-        font-size: 0.6rem;
-    }
-
-    .projet-2 {
-        padding: 0.4rem;
-    
-    }
-    .projet-2 p {
-        font-size: 0.6rem;
-    }
-
-    .projet-2 img{
-    height: 9rem;
-    }
-        
-   
     #contact img {
         width: 3rem;  
     }
-    .logo-contact {
-        font-size: 0.7rem;
+    .logo-contact p {
+        font-size: 0;
     }
     
+    }
+/* Pour les écrans jusqu'à 767 pixels de large (smartphones) */
+@media only screen and (min-width:321px) and (max-width: 767px) {
+ 
+    html {
+        scroll-padding: 2.7rem;;
+    }
+
+    h1 {
+        font-size: 35px;;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    h4 {
+        font-size: 1.2rem;
+    }
+ 
+    header {
+        height: 2.7rem;
+    }
+
+    header img {
+        width: 8.5rem;
+    }
+
+    #icons {
+        display: block;
+        font-size: 1.5em;
+    }
+
+    #icons:before {
+        content:"\2630";
+    }
+
+    .active #icons:before {
+        content:"\2613";
+    }
+
+    nav ul {
+        position: fixed;
+        top: 10px;/*sticky ? position top : 5px??*/
+        right: -200%;/*pbm avec 100, il faut le mettre à 0 pour qu'il prenne bien sa place après...
+        vien surement des réglages fais en haut comme pour mar-left pour li !*/
+        flex-direction: column;
+        text-align: center;
+        background-color: #fff;
+        width: 100%;
+        justify-content: space-evenly;
+        height: 50%;
+        transition: 0.25s;
+    }
+
+    nav li {
+        margin-left:0;
+    }
+
+    nav li:hover {
+        background-color: #ebe8e8;
+    }
+
+    nav.active ul {
+        right: 0%;
+    }
+
+    #a-propos {   
+        height: 250vh;
+    }
+
+    .content {
+        display: block;
+    }
+
+    .content-presentation img {
+        margin-left: 20px;
+    }
+
+    #text-about {
+        margin: 10px;
+        padding:0.3rem;
+    }
+
+   .content-passion {
+        display: flex;
+        margin-top: 40px;
+   }
+
+    #competences {
+        height: 230vh;
+    }
+
+    .content-cv {
+        display: block;
+    }
+
+    #more {
+        margin: 5px 30px 35px 15px;
+    }
+
+    .cv img {
+        width: 15.75rem;
+    }
+    
+    #auto-formation {
+        margin: 5px 30px 30px 15px;
+    }
+
+    .logos::before,
+    .logos::after {
+        background: none;
+    }
+
+    .logos {
+        padding: 0.7rem;
+    }
+    .logos-slide img {
+        height: 2.7rem; 
+    }
+    
+    #projets {
+       height: 450vh; 
+    }
+
+   .projet {
+    display: block;
+    padding: 1rem;
+    margin: 5px 30px 30px 15px;
+   }
+         
+    .slide img {
+        width: 100%;
+        margin:0;
+    }
+
+    .carousel-button.prev {
+        left:2%;
+    }
+            
+    .carousel-button.next {
+        left:85%;
+    }
+
+    .projets-details {
+        display: block;
+    }
+
+    .projet-1{
+        margin: 5px 30px 30px 15px;
+        padding: 0.2rem;
+    }
+    
+    .projet-1 img{
+        height: 6rem;
+    }
+
+    .projet-2 {
+        margin: 5px 30px 30px 15px;
+        padding: 0.2rem;
+    }
+
+    .projet-2 img {
+    height: 10rem;
+    }
+        
+    #contact img {
+        width: 3rem;  
+    }
+    .logo-contact p {
+        font-size: 0;
+    }
 }
 
+
+/* Pour les écrans de 768 à 991 pixels de large (tablettes) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+    h1 {
+        font-size: 35px;;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    h4 {
+        font-size: 1.2rem;
+    }
+
+    header img {
+        width: 8.5rem;
+    }
+
+    #icons {
+        display: block;
+        font-size: 1.5em;
+    }
+    #icons:before {
+        content:"\2630";
+    }
+    .active #icons:before {
+        content:"\2613";
+    }
+    nav ul {
+        position: fixed;
+        top: 10px;/*sticky ? position top : 5px??*/
+        right: -200%;/*pbm avec 100, il faut le mettre à 0 pour qu'il prenne bien sa place après...
+        vien surement des réglages fais en haut comme pour mar-left pour li !*/
+        flex-direction: column;
+        text-align: center;
+        background-color: #fff;
+        width: 100%;
+        justify-content: space-evenly;
+        height: 50%;
+        transition: 0.25s;
+    }
+
+    nav li {
+        margin-left:0;
+    }
+
+    nav li:hover {
+        background-color: #ebe8e8;
+    }
+
+    nav.active ul {
+        right: 0%;
+    }
+
+    #a-propos {   
+        height: 100vh;
+    }
+
+    .content-presentation img {
+        margin-left: 20px;
+    }
+    #text-about {
+        margin: 10px;
+        padding:0.3rem;
+    }
+   .content-passion {
+    display: flex;
+    margin-top: 40px;
+   }
+
+    #competences {
+        height: 100vh;
+    }
+
+    #more {
+        margin: 5px 30px 35px 15px;
+    }
+
+    .cv img {
+        width: 15.75rem;
+    }
+    
+    #auto-formation {
+        margin: 5px 30px 30px 15px;
+    }
+    
+    #projets {
+       height: 250vh; 
+    }
+
+    .projet {
+        display: block;
+    }
+
+    .projet-1 {
+        margin: 5px 30px 30px 15px;
+        padding: 0.2rem;
+    }
+    
+    .projet-1 img {
+        height: 6rem;
+    }
+
+    .projet-2 {
+        margin: 5px 30px 30px 15px;
+        padding: 0.2rem;
+    
+    }
+
+    .projet-2 img {
+    height: 10rem;
+    }
+    
+    .logo-contact {
+        height: 20vh;
+    }
+
+    #contact img {
+        width: 3rem;  
+    }
+    .logo-contact p {
+        font-size:0.8rem;
+    }
+    }
   
 
-/* Pour les écrans de 992 à 1199 pixels de large (ordinateurs portables) */
+/* Pour les écrans de 992 à 1199 pixels de large (ordinateurs portables) 
 @media only screen and (min-width: 992px ) and ( max-width : 1199px ) {
 
 
-}
+}*/

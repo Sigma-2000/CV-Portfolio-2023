@@ -5,7 +5,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>CV 2023</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="style.css">  
         <script src="script.js" defer></script>
     </head>
     
@@ -35,33 +38,96 @@
                 <h2>A Propos</h2>
             </div>
             <div class="content">
+                <div class="content-presentation">
                     <img src="images/photo-cv-AG-modified.png" alt="photo-AG"/>
-                <div id="text-about">
-                    <h4> Autodidacte</h4>
-                    <h4> En recherche d'alternance sur Lyon </h4>
-                    <p> Passionnée d'art numérique et fascinée par l'informatique depuis de nombreuses années,
-                    j'ai en effet assisté à quelques ateliers d'initiation au code via p5.Js avec le collectif lyonnais AADN ou encore à Python avec le logiciel Touchdesigner, 
-                    et également à l'Arduino au Stéréolux à Nantes.  
-                    </p>
-                    <p>
-                    En 2021 j'ai eu un déclic et je me suis décidée à passer le pas en m'autoformant via plusieurs plateformes de cours.
-                    Je suis en recherche d'une alternance pour continuer ma formation, tout en ayant une première expérience professionnelle.
-                    Je suis en effet convaincue que le meilleur moyen d'apprendre se concrétise par la pratique. 
-                    </p>
-                    <p>
-                    Forte d’un parcours atypique et mue par une bonne adaptabilité, mes différentes expériences personnelles et professionnelles m’ont permis de développer un goût pour le challenge et des facultés d’organisation que je saurai mettre à profit.
-                    Je suis à l’aise dans le travail d’équipe, mais je suis également apte à travailler en autonomie. 
-                    </p>
+                    <div id="text-about">
+                        <h4> Autodidacte</h4>
+                        <h4> En recherche d'alternance sur Lyon </h4>
+                        <p> <span>Passionnée</span> d'art numérique et fascinée par l'informatique depuis de nombreuses années,
+                        j'ai en effet assisté à quelques ateliers <span>d'initiation au code via p5.Js</span> avec le collectif lyonnais AADN ou encore à <span>Python avec le logiciel Touchdesigner</span>, 
+                        et également à l'<span>Arduino</span> au Stéréolux à Nantes.  
+                        </p>
+                        <p>
+                        En 2021 j'ai eu un déclic et je me suis décidée à passer le pas en m'autoformant via plusieurs plateformes de cours.
+                        Je suis en recherche d'une alternance pour continuer ma formation, tout en ayant une première expérience professionnelle.
+                        Je suis en effet convaincue que le meilleur moyen d'apprendre se concrétise par la pratique. 
+                        </p>
+                        <p>
+                        Forte d’un <span>parcours atypique</span> et mue par une <span>bonne adaptabilité</span>, mes différentes expériences personnelles et professionnelles m’ont permis de développer un goût pour le challenge et des facultés d’organisation que je saurai mettre à profit.
+                        Je suis à l’aise dans le travail d’équipe, mais je suis également apte à travailler en autonomie. 
+                        </p>
+                    </div>  
                 </div>
-            </div>  
+                <div class="content-passion">
+                    <figure class="peinture">
+                        <img src="images/photoGeisha.jpg" alt="peinture"/>
+                        <figcaption>Création, ventes et exposition d'oeuvres d'art</figcaption>
+                    </figure>
+                    <figure class="magic">
+                        <img src="images/photoMagic.jpg" alt="magic"/>
+                        <figcaption>Pratique du jeu de carte Magic</figcaption>
+                    </figure>
+                    <figure class="paddle">
+                        <img src="images/paddle.jpg" alt="paddle"/>
+                        <figcaption>Traversée de la Loire en paddle en 15 jours (390km)</figcaption>
+                    </figure>
+                    <figure class="japon">
+                        <img src="images/photoJapon.JPG" alt="japon"/>
+                        <figcaption>Road Trip dans le nord du Japon</figcaption>
+                        <figcaption>Apprentissage des bases conversationnels en 3 semaines</figcaption>
+                    </figure>
+                </div>
+            </div>
         </section>
     
-        <section id="competences">
+        <section id="competences">          
             <div class="titre-conteneur" id="two">
                 <h2>Compétences</h2>
             </div>
-            <div class="logos">
-                <div class="logos-slide">           
+            <div class="content-cv">
+                <div class="cv">
+                    <div id="more">
+                        <p>Pour en savoir plus sur mon parcours <span>autodidacte &#8702;</span></p>
+                        <p>Et n'oubliez de télécharger mon CV pour en savoir plus sur mes <span>soft skills</span> !</p>
+                    </div>
+                <img src="images/CV-Amélie-Guyot-2023.png"/>
+                <button class="btn-cv"><a href="assets/CV-Amélie-Guyot-2023.pdf" download="assets/CV-Amélie-Guyot-2023.pdf"> Téléchargez mon CV </a></button>
+            </div>
+            <div id="auto-formation">
+                <p>OpenClassRoom</p>
+                <ul>
+                    <li>Découvrez le fonctionnement des <span>algorithmes</span></li>
+                    <li>Comprendre le Web</li>
+                    <li>Apprenez à utiliser la <span>ligne de commande</span>dans un terminal</li>
+                    <li>Gérez du code avec <span>Git et GitHub</span></li>
+                    <li>Créez votre site web avec <span>HTML5 et CSS3</span></li>
+                    <li>Apprenez à programmer avec <span>JavaScript</span></li>
+                    <li>Créez des pages web dynamiques avec JavaScript</li>
+                    <li>Utilisez des <span>design patterns</span> en JavaScript</li> 
+                </ul>
+                <p>Wes Bos</p>
+                <ul>
+                    <li><span>Challenge</span> Javascript 30</li>
+                    <li>Beginner JavaScript</li>
+                    <li><span>React</span>for Beginners</li>
+                </ul>
+                <p>Youtube</p>
+                <ul>
+                    <li>Benjamin Code</li>
+                    <li>DevTheory</li>
+                    <li>Code with Ania Kubów</li>
+                    <li>Franks laboratory</li>
+                    <li>École du Web</li>
+                    <li>The Coding Train</li>
+                </ul>
+                <p>Domestika</p>
+                <ul>
+                    <li>Conception, développement et lancement d'un site Web</li>
+                </ul>
+            </div>
+        </div>
+        <div class="logos">
+            <div class="logos-slide">           
                 <img src="images/html5.png" alt="html"/>
                 <img src="images/css3-logo-8724075274-seeklogo.com.png" alt="css"/>
                 <img src="images/javascript-logo-E967E87D74-seeklogo.com.png" alt="js"/>
@@ -70,63 +136,100 @@
                 <img src="images/vecteezy_adobe-indesign-logo_21963712.jpg" alt="indesign"/>
                 </div>
             </div>
-            <div class="cv">
-                <img src="images/CV-Amélie-Guyot.png" alt="cv"/> 
-                <button class="btn-cv"><a href="assets/CV-Amélie-Guyot.pdf" download="assets/CV-Amélie-Guyot.pdf"> Téléchargez mon CV </a></button>
-            </div>
         </section>
 
         <section id="projets">
-            <div class="titre-conteneur" id="three">
+
+             <div class="titre-conteneur" id="three">
                 <h2>Projets</h2>
             </div>
-            <div class="projets-slider">
-                <div class="carousel">
-                    <button class="carousel-button prev" data-carousel-button="prev"><</button>
-                    <button class="carousel-button next" data-carousel-button="next">></button> 
-        
+            <h4>Réalisation passés</h4>
+            <div class="projet">
+                <div class="carousel" id="carousel1">
                     <div class="slide active">
                         <img src="images/generative-app3.jpg" alt="generative">
-                        <div class="slide-legend">
-                            <h2 class="slide-hl">Generative App</h2>
-                            <p class="slide-text">
-                            C'est un des projets les plus aboutit que j'ai pu concevoir à ce jour, puisqu'il est responsive et qu'il répond aux bonnes pratiques du développement web en terme de structure et d'organisation du code. 
-                            J'ai pu mettre en application, une nouvelle fois des fonctions aléatoires, utiliser les variables CSS  et créer une pop up de partage via email. 
-                            J'ai pu aussi mettre en pratique les Regex, le Try/ Catch afin de gérer les erreurs sur la saisie des informations concernant le mail de la pop-up.
-                            </p>
-                            <a href="https://github.com/Sigma-2000/Generative-App" class="slide-link">Learn More</a>
                         </div>
+                        <div class="slide">
+                            <img src="images/generative-app4.jpg" alt="generative2">
+                        </div>
+                        <div class="slide">
+                            <img src="images/responsive-generative3.png" alt="generative3">
+                        </div>
+                        <div class="slide">
+                            <img src="images/responsive-generative.png" alt="rain-code">
+                        </div>
+                        <button class="carousel-button prev" data-carousel-button="prev"><</button>
+                        <button class="carousel-button next" data-carousel-button="next">></button> 
                     </div>
-                    <div class="slide">
-                        <img src="images/rain-code.jpg" alt="rain-code">
-                        <div class="slide-legend">
-                            <h2 class="slide-hl">Rain Code</h2>
-                            <p class="slide-text"> 
-                            C'est un projet de coding-art reprenant l'iconique intro de Matrix, ce fut l'occasion de travailler via l'API canvas mais aussi d'appréhender la POO et quatres de ses fondements : 
-                            l'encapsulation, l'abstraction, le polymorphisme et plus précisément d'héritage. 
-                            Ce projet est en partie en responsive. 
-                            Il m'a permis aussi de jouer sur la fréquence d'image et de découvrir les fonctions aléatoires. 
-                            </p>
-                            <a href="https://github.com/Sigma-2000/Rain-code" class="slide-link">Learn More</a>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <img src="images/totoro-game6.jpg" alt="totoro">
-                        <div class="slide-legend">
-                            <h2 class="slide-hl">Totoro Game</h2>
-                            <p class="slide-text"> 
-                            Premier projet de création d'un jeu en Javascript vanilla sans l'API Canvas, tout est basé sur la manipulation du DOM. 
-                            J'ai pu travailler le concept de switch mais aussi la création d'addEventListener sur notamment les touches de clavier.
-                            J'ai conçu des effets de rebond, de collision notamment avec l'utilisation de getBoundingClientRect.  
-                            </p>
-                            <a href="https://github.com/Sigma-2000/Totoro-game1" class="slide-link">Learn More</a>
-                        </div>
+
+                    <div class="carousel-text">
+                        <p>  C'est un des projets finit les plus aboutit que j'ai pu concevoir à ce jour, 
+                            il est <span>responsive</span> et il répond aux bonnes pratiques du développement web en terme de <span>structure et d'organisation du code</span>. 
+                        </p>
+                        <p>
+                            J'ai pu mettre en application, une nouvelle fois des fonctions aléatoires, utiliser les variables CSS et créer une <span>pop up de partage via email</span>. 
+                            J'ai pu aussi mettre en pratique des <span>Regex</span>, ainsi que <span>Try/ Catch</span> afin de gérer les erreurs sur la saisie des informations concernant le mail de la pop-up.
+                        </p>
                     </div>
                 </div>
-                <div class="projets-en-cours">
-                    <div class="titre-conteneur" id="four">
-                    <h2>Projets en cours</h2>
+            </div>
+            <div class="projet">
+                <div class="carousel" id="carousel2">
+                        <div class="slide active">
+                            <img src="images/rain-code.jpg" alt="rain-code">
+                        </div>
+                        <div class="slide">
+                            <img src="images/rain-code1.jpg" alt="rain-code">
+                            </div>
+                        <div class="slide">
+                            <img src="images/rain-code3.png" alt="rain-code">
+                        </div>
+                            <button class="carousel-button prev" data-carousel-button="prev"><</button>
+                            <button class="carousel-button next" data-carousel-button="next">></button> 
+                        </div>
+                    <div class="carousel-text">
+                        <p> C'est un projet de coding-art reprenant l'iconique intro de Matrix, ce fut l'occasion de travailler via l'API <span>Canvas</span> mais aussi d'appréhender la <span>POO et quatres de ses fondements</span> : 
+                            l'encapsulation, l'abstraction, le polymorphisme et plus précisément d'héritage. 
+                        </p>
+                        <p>
+                            Il m'a permis aussi de jouer sur la <span>séquence d'image</span> et de découvrir les <span>fonctions aléatoires</span>. 
+                            J'ai utiliser un addEventListener pour créer une interaction avec la souris de l'utilisateur.
+                        </p>
                     </div>
+                </div>
+
+                <div class="projet">
+                    <div class="carousel" id="carousel3">
+                            <div class="slide active">
+                                <img src="images/totoro-game6.jpg" alt="totoro">
+                            </div>
+                            <div class="slide">
+                                <img src="images/totoro-game2.jpg" alt="totoro2">
+                            </div>
+                            <div class="slide">
+                                <img src="images/totoro-game5.jpg" alt="totoro2">
+                            </div>
+                            <div class="slide">
+                                <img src="images/totoro-game1.jpg" alt="totoro2">
+                            </div>
+                            <button class="carousel-button prev" data-carousel-button="prev"><</button>
+                            <button class="carousel-button next" data-carousel-button="next">></button> 
+                    </div>
+
+                    <div class="carousel-text">
+                        <p>  Premier projet de création d'un jeu en <span>Javascript vanilla</span> sans l'API Canvas, tout est basé sur la <span>manipulation du DOM</span>. 
+                            J'ai pu travailler le concept de <span>switch</span> mais aussi la création d'<span>addEventListener</span> sur les touches de clavier.
+                             </p>
+                        <p>
+                            J'ai conçu des effets de rebond, de collision notamment avec l'utilisation de <span>getBoundingClientRect</span> ce qui a été une des partie
+                            les plus hardus à réaliser. Je pense que je devrai factoriser mon code pour l'améliorer.
+                        </p>
+                    </div>
+                </div>   
+            </div>
+           
+                <div class="projets-en-cours">
+                    <h4>Projets en cours</h4>
                     <div class="projets-details">
                         <div class="projet-1">
                             <h4>Projet collaboratif</h4>
@@ -135,17 +238,24 @@
                             Il est réalisé en collaboration avec deux autres développeurs juniors: 
                             Anne Becquet spécialisée en  React et Romain Pesche spécialisé en Back et Python. 
                             </p>
-                            <p> Nous abordons ce projet avec la méthode Agile. Je suis chargée de la partie Front,
-                            nous utiliserons React, le framework Sass... la première étape de ce projet est d'intégrer
-                            une map et tout ce qui touche à un compte client. 
+                            <p> Nous abordons ce projet avec la méthode <span>Agile</span>. Je suis chargée de concevoir la partie Front de la mise en place 
+                                jusqu'au déploiement. J'ai pu mettre en place un environnement de développement <span>React avec Vite</span>
+                                avec des dépendances commme <span>Eslint, Prettier</span>.
+                                Nous avons mis en place des <span>tests</span> et une <span>pipeline</span> à chaque pull request. 
+                            </p>
+                            <p>
+                                Nous utiliseront le framework <span>Tailwind</span>. 
+                                Je serais amener à travailler avec une <span>Api</span> pour gérer une map et à mettre en place des comptes clients, en gérant les données avec Redux. 
+                                Cela sera aussi l'occasion pour moi d'apprendre à utiliser <span>Sql</span> pour la base de données et <span>Axios</span> pour les requêtes HTTP.
                             </p>
                         </div>
                         <div class="projet-2">
                             <h4>Site artistique de Sigma-2000</h4>
                             <img src="images/hope-affiche.jpg" alt="hope"/>
                             <p> Projet de création d'un site design pour montrer mes créations artistiques.
-                                C'est pour moi l'occasion de continuer à travailler avec React, de déployer pour la première fois
-                                et de pouvoir créer un mode jour/nuit en Css, Javascript. 
+                                C'est pour moi l'occasion de continuer à travailler avec React et d'utiliser soit Vite ou <span>Next Js</span>, et de pouvoir consolider
+                                mes connaissances concernant la création d'un site web de la mise en place de l'<span>environnement de développement au déploiement</span>.
+                                
                             </p>
                         </div>
                     </div>
@@ -154,24 +264,25 @@
         </section>
     
         <section id="contact">
-            <div class="titre-conteneur" id="five">
+            <div class="center-focus"></div>
+            <div class="titre-conteneur" id="four">
                 <h2>Contactez moi</h2>
             </div>
             <div class="logo-contact">
                 <div id="linkedin">
-                    <h4>Sur Linkedin</h4>
+                    <p>Sur Linkedin</p>
                     <a href="https://www.linkedin.com/in/am%C3%A9lie-guyot/">
                         <img src="images/logo-linkedin.webp" alt="logo-linkedin">
                     </a>
                 </div>
                 <div id="mail">
-                    <h4>Ou par mail</h4>
+                    <p>Ou par mail</p>
                     <a href="mailto:amelieguyot7@gmail.com"> 
                         <img src="images/email-logo.png" alt="logo-mail">
                     </a> 
                 </div>
                 <div id="github-logo">
-                    <h4>Et allez voir mon Github !</h4>
+                    <p>Et allez voir mon Github !</p>
                     <a href="https://github.com/Sigma-2000"> 
                         <img src="images/vecteezy_github-logo-git-hub-icon-on-white-background_16833872.jpg" alt="logo-github">
                     </a> 
