@@ -70,6 +70,36 @@ h2 {
     text-transform: uppercase; 
     font-family:'Syne', sans-serif;
 }
+.matrix {
+    text-transform: none; 
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    position: relative;
+}
+.matrix::after{
+        content: "";
+        position: absolute;
+        display: block;
+        height: 100%;
+        width: 3px;
+        background: #dadada;
+        right: -15px;
+        top: 0;
+        animation: cursor 1s infinite;
+      }
+      
+      @keyframes cursor {
+        0% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+      
+}
 
 h3 {
     color:white;  
@@ -150,6 +180,16 @@ nav a:hover {
    color: white;
    font-family: 'lora', sans-serif;
 }
+
+#accueil a {
+    text-decoration: none;
+}
+
+#accueil img {
+    width: 2.5rem;
+    margin: 1rem;
+}
+
 
 /*
 @keyframes title-slide {

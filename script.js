@@ -1,3 +1,19 @@
+/*Animation titre*/
+const title = document.querySelector('[aria-label="matrix"]');
+const txt = "Bienvenue dans la matrice"
+console.log(title)
+function typewriter(word, index){
+    if(index < word.length) {
+        setTimeout(() => {
+            title.innerHTML += `<span>${word[index]}</span>`
+            typewriter(txt, index + 1)
+        }, 200);
+    }
+}
+setTimeout(() => {
+    typewriter(txt, 0)
+}, 700);
+
 /*Logo carrousel*/ 
 const copy = document.querySelector('.logos-slide').cloneNode(true);
 document.querySelector(".logos").appendChild(copy);
