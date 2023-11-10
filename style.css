@@ -477,6 +477,12 @@ figcaption {
     left:65%;
 }
 
+.slide-link {
+    text-decoration: none;
+    /*text-transform: uppercase;*/
+    /*color: black;*/
+}
+
 .projets-details {
     display: flex;
     justify-content: space-around ;
@@ -663,7 +669,7 @@ figcaption {
     }
 
     #a-propos {   
-        height: 350vh;
+        height: 300%;
     }
 
     .content {
@@ -686,7 +692,7 @@ figcaption {
    }
 
     #competences {
-        height: 320vh;
+        height: 300%;
     }
 
     .content-cv {
@@ -718,7 +724,7 @@ figcaption {
     }
     
     #projets {
-       height: 700vh; 
+       height: 700%; 
     }
 
    .projet {
@@ -836,7 +842,9 @@ figcaption {
     }
 
     #a-propos {   
-        height: 250vh;
+       /* min-height: 220vh;*/
+        height: 200%;
+
     }
 
     .content {
@@ -858,7 +866,7 @@ figcaption {
    }
 
     #competences {
-        height: 230vh;
+        height: 200%;
     }
 
     .content-cv {
@@ -890,7 +898,7 @@ figcaption {
     }
     
     #projets {
-       height: 450vh; 
+       height: 400%; 
     }
 
    .projet {
@@ -999,7 +1007,7 @@ figcaption {
     }
 
     #a-propos {   
-        height: 100vh;
+        height: 100%;
     }
 
     .content-presentation img {
@@ -1015,7 +1023,7 @@ figcaption {
    }
 
     #competences {
-        height: 100vh;
+        height: 100%;
     }
 
     #more {
