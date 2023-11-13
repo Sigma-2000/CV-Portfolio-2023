@@ -238,7 +238,7 @@ h1, h3 {
 /***presentation AG***/
 
 #a-propos {
-    height: 100vh;
+    height: 100%;
     margin-top: 0;
 }
 .content {
@@ -295,7 +295,7 @@ figcaption {
 /***competences***/
 
 #competences {
-    height: 100vh;
+    height: 100%;
 }
 
 .content-cv {
@@ -438,7 +438,7 @@ figcaption {
 /***projets***/
 
 #projets {
-    height: 280vh;
+    height: 280%;
 }
   
 .projet {
