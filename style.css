@@ -72,6 +72,7 @@ h2 {
 }
 .matrix {
     text-transform: none; 
+    /*font-family:'Open Sans', sans-serif;*/
     font-family: 'Courier New', Courier, monospace;
     font-size: 30px;
     position: relative;
@@ -116,7 +117,8 @@ h4 {
 
 p {
     font-size: 0.938rem ; 
-    font-family: 'lora', sans-serif;
+    font-family: 'lora',sans-serif;
+    /*font-family: 'Open Sans', sans-serif;*/
 }
 
 span {
@@ -148,6 +150,7 @@ nav li {
 nav a {
     font-size: 1.3rem;
     font-family: 'lora', sans-serif;
+    /*font-family:'Open Sans', sans-serif;*/
     color: #181818;
     padding-bottom: 0.188rem;
     text-decoration: none;
@@ -274,22 +277,31 @@ h1, h3 {
     /*gap: 10px;*/
 }
 
+.content-passion h4{
+    margin-top: 0;
+    margin-bottom: 0.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 figure {
+    margin-top: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 figure img {
-    width: 190px;
+    width: 170px;
 }
 
 figcaption {
     color: #222;
-    font-family: 'lora', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 0.7rem;
     font-weight: bold;
     text-align: center; 
+    margin-top: 0.5rem;
 }
 
 /***competences***/
