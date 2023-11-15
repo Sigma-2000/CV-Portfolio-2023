@@ -297,7 +297,8 @@ figure img {
 
 figcaption {
     color: #222;
-    font-family: 'Open Sans', sans-serif;
+    /*font-family: 'Open Sans', sans-serif;*/
+    font-family: 'lora';
     font-size: 0.7rem;
     font-weight: bold;
     text-align: center; 
